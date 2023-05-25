@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuEditActivity"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/btnAddMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnAddMeja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meja"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAddMenu"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newTask"
+        android:text="New Menu"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:textColor="?attr/colorOnSecondary"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAddMeja"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTask"
+        android:text="Edit Menu"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:textColor="?attr/colorOnSecondary"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTask"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTask"
+        android:id="@+id/linear1">
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Product Name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:maxLength="20"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/edtDesc"
+            android:hint="Desc"
+            android:textColorHint="#cccccc"
+            android:textColor="?attr/colorOnSecondary"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionDone"
+            android:layout_marginBottom="10dp"
+            android:gravity="top"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:id="@+id/edtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Price"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:maxLength="20"
+            android:background="@drawable/edittextstyle"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/viewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Title"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/viewDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextstyle"
+            android:hint="Desc"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/viewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Price"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newTable"
+        android:text="New Table"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:textColor="?attr/colorOnSecondary"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newTable"
+        android:id="@+id/linear3">
+
+        <EditText
+            android:id="@+id/edtNameMeja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Table Name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:maxLength="20"
+            android:background="@drawable/edittextstyle"/>
+
+        <Button
+            android:id="@+id/btnSaveMeja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

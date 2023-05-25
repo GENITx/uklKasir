@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:id="@+id/linear1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTask"
+            android:text="Edit User"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:maxLength="20"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:background="@drawable/edittextstyle"/>
+
+        <EditText
+            android:id="@+id/edtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Pass"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:maxLength="16"
+            android:background="@drawable/edittextstyle"/>
+
+        <Button
+            android:id="@+id/btnUpdateUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/viewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Title"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/viewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Email"
+            android:textColor="?attr/colorOnSecondary"
+            android:textColorHint="#cccccc"
+            android:background="@drawable/edittextstyle"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
